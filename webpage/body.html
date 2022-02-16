@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3dBoss</title>
+        <title>sketchfab example</title>
+        <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.0.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">3dBoss</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>
+                </ul>
+                <form class="navbar-form navbar-left" action="/action_page.php">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search" name="search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="jumbotron">
+                <h1>3dBoss</h1>
+                <p>Model and showcase 3d Art work with sketchfab!</p>
+                <p>New to 3d art? No problem we Have plenty of resources!</p>
+            </div>
+            <img src="https://robohash.org/asuh.png/?set=set5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h3>Column 1</h3>
+                        <p>sketchfab viewer</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <h3>Column 2</h3>
+                        <p>sketchfab editor</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <h3>Column 3</h3>
+                        <p>sketchfab content viewer</p>
+                        <!-- Insert an empty iframe with attributes -->
+                        <iframe src="" id="api-frame" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                        <!-- Initialize the viewer -->
+                        <iframe src="" id="api-frame" sandbox="allow-scripts allow-same-origin allow-popups allow-forms" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                        <script type="text/javascript">
+                            var uid = '0623646005a3455b9e72c5f63062a74f';
+                            var iframe = document.getElementById( 'api-frame' );
+                            // By default, the latest version of the viewer API will be used.
+                    var client = new Sketchfab( iframe );
+                    
+                    // Alternatively, you can request a specific version.
+                    // var client = new Sketchfab( '1.12.0', iframe );
+                    
+                    client.init( uid, {
+                        success: function onSuccess( api ){
+                            api.start();
+                            api.addEventListener( 'viewerready', function() {
+                                
+                                // API is ready to use
+                                // Insert your code here
+                                console.log( 'Viewer is ready' );
+                                
+                            } );
+                        },
+                        error: function onError() {
+                            console.log( 'Viewer error' );
+                        }
+                    } );
+                </script>
+</body>
+</html>
+</div>
+</div>
+</div>
+</body>
+</html>
